@@ -1,0 +1,59 @@
+.card{
+  background: #F5F5F5;
+  border-radius: 8px;
+  padding: 30px 23px 23px 27px;
+}
+.content{
+  width: 100%;
+}
+.all-content{
+  display: flex;
+  margin-bottom: 17px;
+  width: 100%;
+}
+.image{
+  margin-right: 44px;
+  width: 28%;
+  height: 28%;
+}
+.aditional-info{
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.aditional-info-item{
+  margin-right: 8px;
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 1px 14px 1px 14px;
+
+  /*text*/
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #595959;
+}
+
+.main-github-info{
+  background: #FFFFFF;
+  border: 1px solid #D9D9D9;
+  box-sizing: border-box;
+  border-radius: 6px;
+  padding: 8px 17px 17px 14px;
+  width: 100%;
+}
+
+.title-info{
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  display: flex;
+  align-items: center;
+  color: #1890FF;
+}
