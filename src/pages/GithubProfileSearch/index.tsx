@@ -30,11 +30,19 @@ const GithubProfileSearch = () => {
 
 
     makeRequest({ url: `/users/${userProfile}` })
-      .then(response => setUserData(response.data))
+      .then(response =>{
+        setUserData(response.data)
+        setIsStarted(true);
+      })
+      .catch(()=>{
+        alert('Usuário não encontrado!');
+        setIsStarted(false);
+        setIsLoading(false);
+      })
       .finally(() => {
        
         setIsLoading(false);
-        setIsStarted(true);
+        
       })
   }
 
