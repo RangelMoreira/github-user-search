@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { UserProfileData } from '../../core/types/UserData';
 import { makeRequest } from '../../core/utils/request';
+import InfoLoader from './components/Loaders/InfoLoader';
 import GitgubCard from './GithubCard';
 import './styles.scss';
 type FormEvent = React.ChangeEvent<HTMLInputElement>
@@ -62,10 +63,10 @@ const GithubProfileSearch = () => {
         </div>
       </form>
 
-      {isLoading && "Carregando..."}
+      {isLoading && <InfoLoader/>}
+      
       {isStarted && 
         <GitgubCard 
-
           public_repos={userData?.public_repos} 
           followers={userData?.followers}
           following={userData?.following}
@@ -76,7 +77,7 @@ const GithubProfileSearch = () => {
           userName = {userProfile}
           created_at ={userData?.created_at}
         />
-      
+        
       }
 
     </div>
