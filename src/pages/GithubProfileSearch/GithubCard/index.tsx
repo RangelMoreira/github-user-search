@@ -27,10 +27,26 @@ const GitgubCard = (prop: Props) =>{
           </div>
           <div className="main-github-info">
             <h2 className="title-info">Informações</h2>
-            <InfoProfileCard title={'empresa'} info={prop.company}/>
-            <InfoProfileCard title={'Website/blog'} info={prop.blog}/>
-            <InfoProfileCard title={'Localidade'} info={prop.location}/>
-            <InfoProfileCard title={'Membro desde'} created={prop.created_at}/>
+            <InfoProfileCard 
+              title={'empresa:'} 
+              info={prop.company} 
+              isDate={false}
+            />
+            <InfoProfileCard 
+              title={'Website/blog:'} 
+              info={prop.blog}
+              isDate={false}
+            />
+            <InfoProfileCard 
+              title={'Localidade:'} 
+              info={prop.location}
+              isDate={false}
+            />
+            <InfoProfileCard 
+              title={'Membro desde:'} 
+              created={prop.created_at}
+              isDate={true}
+            />
           </div>
           
         </div>

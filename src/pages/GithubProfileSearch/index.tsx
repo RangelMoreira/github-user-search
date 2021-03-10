@@ -31,8 +31,7 @@ const GithubProfileSearch = () => {
     makeRequest({ url: `/users/${userProfile}` })
       .then(response => setUserData(response.data))
       .finally(() => {
-        console.log(userData);
-
+       
         setIsLoading(false);
         setIsStarted(true);
       })
