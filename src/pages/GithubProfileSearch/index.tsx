@@ -66,6 +66,7 @@ const GithubProfileSearch = () => {
       {isLoading && "Carregando..."}
       {isStarted && 
         <GitgubCard 
+
           public_repos={userData?.public_repos} 
           followers={userData?.followers}
           following={userData?.following}
@@ -73,8 +74,9 @@ const GithubProfileSearch = () => {
           company={userData?.company}
           blog={userData?.blog}
           avatar_url = {userData?.avatar_url}
+          userName = {userProfile}
+          created_at ={userData?.created_at}
         />
-      
       
       }
 

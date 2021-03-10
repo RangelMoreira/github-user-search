@@ -5,6 +5,6 @@ export type UserProfileData={
   company: String;
   blog: String;
   location:String;
-  created_at: String;
+  created_at: Date;
   avatar_url:string;
 }

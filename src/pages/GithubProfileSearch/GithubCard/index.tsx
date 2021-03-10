@@ -3,13 +3,14 @@ import InfoProfileCard from './InfoProfileCard';
 import './styles.scss';
 
 type Props ={
+  userName?: String;
   public_repos?:number;
   followers?:number;
   following?:number;
   company?: String;
   blog?: String;
   location?:String;
-  // created_at?: String;
+  created_at?: Date;
   avatar_url?:string;
 }
 
@@ -18,9 +19,6 @@ const GitgubCard = (prop: Props) =>{
     <div className="card">
       <div className="all-content">
         <img className="image" src={prop.avatar_url} alt=""/>
-        {/* <div className="image">
-          
-        </div> */}
         <div className="content">
           <div className="aditional-info">
             <div className="aditional-info-item">Repositórios públicos: {prop.public_repos}</div>
@@ -32,13 +30,19 @@ const GitgubCard = (prop: Props) =>{
             <InfoProfileCard title={'empresa'} info={prop.company}/>
             <InfoProfileCard title={'Website/blog'} info={prop.blog}/>
             <InfoProfileCard title={'Localidade'} info={prop.location}/>
-            <InfoProfileCard title={'Membro desde'} info="@ZupIT"/>
+            <InfoProfileCard title={'Membro desde'} created={prop.created_at}/>
           </div>
           
         </div>
       </div>
       
-      <button className="button">Ver perfil</button>
+      <a 
+        href={`https://github.com/${prop.userName}`} 
+        target="_blank" 
+        rel="noreferrer" className="button-start"
+      >
+        Ver perfil
+      </a>
 
     </div>
   );
