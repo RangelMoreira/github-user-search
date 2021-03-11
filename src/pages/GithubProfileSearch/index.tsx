@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { UserProfileData } from '../../core/types/UserData';
 import { makeRequest } from '../../core/utils/request';
-import InfoLoader from './components/Loaders/InfoLoader';
 import GitgubCard from './GithubCard';
 import './styles.scss';
+import MainLoader from './components/Loaders/MainLoader';
 type FormEvent = React.ChangeEvent<HTMLInputElement>
 
 const GithubProfileSearch = () => {
@@ -71,7 +71,9 @@ const GithubProfileSearch = () => {
         </div>
       </form>
 
-      {isLoading && <InfoLoader/>}
+      {isLoading && 
+        <MainLoader/>
+      }
       
       {isStarted && 
         <GitgubCard 
@@ -87,6 +89,7 @@ const GithubProfileSearch = () => {
         />
         
       }
+      {/* <MainLoader/> */}
 
     </div>
 
