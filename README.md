@@ -2,7 +2,7 @@
 
 É o segundo exercício do bootcamp da devSuperior, trata-se de um projeto criado em React Js que consome a API oficial do Github, onde é feita uma busca pelo username e os dados do perfil são exibidos em um componente React js.
 
-# </> Como Utilizar o código
+# </> Como Utilizar o código?
 
 Basta executar `yarn add`  para que sejam instaladas todas as dependências.
 
